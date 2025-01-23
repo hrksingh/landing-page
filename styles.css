@@ -1,0 +1,198 @@
+:root {
+  /* Common Colors */
+  --color-background-light: rgb(238, 252, 238);
+  --color-highlight: rgb(45, 106, 79);
+  --color-highlight-text: rgb(2, 64, 2);
+  --color-white: white;
+
+  /* Font */
+  --font-family-primary: "space", "Roboto", sans-serif;
+  --font-size-base: 1.3em;
+
+  /* Spacing */
+  --padding: 2rem;
+  --gap: 0.7rem;
+
+  /* Flex Configurations */
+  --flex-grow-main: 1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "space";
+  src: url("assets/SpaceGrotesk-VariableFont_wght.ttf");
+  font-display: swap; /* Ensures text is displayed while loading */
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--font-family-primary, monospace);
+}
+
+label,
+input {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input {
+  height: 35px;
+  width: 300px;
+  padding-left: 5px;
+  appearance: none;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.8em;
+  border: 2px solid black;
+}
+
+input::placeholder {
+  opacity: 0.5;
+}
+input:focus {
+  border: none;
+}
+
+input:not(:placeholder-shown):valid {
+  border: 2px solid green;
+}
+
+input:not(:placeholder-shown):invalid {
+  border: 2px solid red;
+}
+
+.side-logo {
+  position: relative;
+  flex: 40%;
+  background-image: url("assets/nicolas-weldingh-salLQNuOllw-unsplash.jpg");
+  background-size: cover;
+}
+
+.logo-bg{
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.logo-bg> img {
+  display: block;
+  width: auto;
+  height: 250px;
+  margin: 170px auto 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: var(--flex-grow-main);
+  width: 100%;
+  flex: 60%;
+}
+
+.desc-header {
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  flex-grow: var(--flex-grow-main);
+  height: 35%;
+  width: 100%;
+  background: var(--color-background-light);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding);
+  gap: var(--gap);
+  justify-content: center;
+}
+
+.highlight {
+  font-weight: bold;
+  color: var(--color-highlight);
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-highlight);
+}
+
+.desc-header p:last-child {
+  margin-top: 3rem;
+  font-size: 1.3em;
+  text-decoration-line: none;
+  color: var(--color-highlight-text);
+}
+
+.sign-up-form {
+  flex-grow: var(--flex-grow-main);
+  height: 50%;
+  width: 100%;
+  background: var(--color-white);
+  z-index: 10;
+  box-shadow: 20px 1px 10px 15px rgba(204, 240, 204, 0.3);
+}
+h3 {
+  font-size: 1.4rem;
+  padding-left: var(--padding);
+  padding-top: calc(var(--padding) - 0.5rem);
+  color: var(--color-highlight-text);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--padding);
+  padding-left: var(--padding);
+  font-size: 1.2rem;
+  gap: 1.3rem;
+}
+
+.names,
+.details,
+.password {
+  display: flex;
+  gap: 6rem;
+}
+
+.login-prompt {
+  flex-grow: var(--flex-grow-main);
+  height: 25%;
+  width: 100%;
+  background: var(--color-background-light);
+}
+
+.create-account-btn {
+  margin-top: 1.6rem;
+  margin-left: 2rem;
+  padding: 0.8rem 2rem;
+  background-color: var(--color-highlight);
+  color: var(--color-white);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: auto;
+  max-width: 250px;
+  transition: background-color 0.3s;
+}
+
+.create-account-btn:hover {
+  background-color: darkgreen;
+}
+
+.create-account-btn:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.login {
+  font-size: 1.2em;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="side-logo">
+      <div class="logo-bg"><img src="/assets/logo.png" alt="logo" /></div>
+    </div>
+    <div class="main">
+      <div class="desc-header">
+        <p>
+          <span class="highlight">Trekkers Trail</span> – your ultimate
+          companion for discovering breathtaking trails and unforgettable
+          experiences.
+        </p>
+
+        <p>
+          Explore the great outdoors with
+          <span class="highlight">Trekkers Trail</span> – where every path leads
+          to discovery and every step creates memories.
+        </p>
+        <p class="highlight">Sign up now to get started trekking</p>
+      </div>
+
+      <div class="sign-up-form">
+        <h3>Let's do this</h3>
+
+        <form
+          action="https://httpbin.org/post"
+          method="post"
+          class="form"
+          id="signup-form"
+        >
+          <div class="names">
+            <div class="fname">
+              <label for="fname"> First Name*</label>
+              <input
+                type="text"
+                name="first_name"
+                id="fname"
+                placeholder="John"
+                required
+              />
+            </div>
+
+            <div class="lname">
+              <label for="lname"> Last Name*</label>
+              <input
+                type="text"
+                name="last_name"
+                id="fname"
+                placeholder="Doe"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="details">
+            <div class="email">
+              <label for="user_email">Email*</label>
+              <input
+                type="email"
+                name="email"
+                id="user_email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+
+            <div class="phoneNum">
+              <label for="phone_number">Phone Number</label>
+              <input
+                type="tel"
+                id="phone_number"
+                name="phone_number"
+                placeholder="987654321"
+              />
+            </div>
+          </div>
+
+          <div class="password">
+            <div class="main-password">
+              <label for="user_password">Password*</label>
+              <input
+                type="password"
+                id="user_password"
+                name="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+
+            <div class="confirm-password">
+              <label for="confirm_user_password">Confirm Password*</label>
+              <input
+                type="password"
+                id="confirm_user_password"
+                name="confirm_password"
+                placeholder="Confirm your password"
+                required
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="login-prompt">
+        <button type="submit" form="signup-form" class="create-account-btn">
+          Create an Account
+        </button>
+
+        <p class="login">Already have an account? <a href="">Log in</a></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
