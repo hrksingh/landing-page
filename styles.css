@@ -80,11 +80,11 @@ input:not(:placeholder-shown):invalid {
   background-size: cover;
 }
 
-.logo-bg{
-    background-color: rgb(0, 0, 0, 0.5);
+.logo-bg {
+  background-color: rgb(0, 0, 0, 0.5);
 }
 
-.logo-bg> img {
+.logo-bg > img {
   display: block;
   width: auto;
   height: 250px;
